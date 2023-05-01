@@ -1,4 +1,24 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
+- [📝 License](#license)
 
 # Blog App
 
@@ -13,7 +33,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](Coming Soon)
 
 ## Getting Started
 
@@ -53,6 +73,13 @@ login: `localhost:3000`
 - GitHub: [@githubhandle](https://github.com/Ogaga01)
 - Twitter: [@twitterhandle](https://twitter.com/i_ogaga_n)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ogaga-iyara-0339b0105/)
+
+## Future Features
+
+> Create User
+> Create Posts
+> Create Comments
+> Update fields
 
 ## 🤝 Contributing
 
