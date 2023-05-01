@@ -20,12 +20,10 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-
 # Blog App
 
 > Description the project.
 > The Blog app is a classic example of a blog website that shows the list of posts and empower readers to interact with them by adding comments and liking posts.
-
 
 ## Built With
 
@@ -101,4 +99,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
