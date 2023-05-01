@@ -2,10 +2,7 @@
 
 > Description the project.
 > The Blog app is a classic example of a blog website that shows the list of posts and empower readers to interact with them by adding comments and liking posts.
-> Create User
-> Create Posts
-> Create Comments
-> Update fields
+
 
 ## Built With
 
@@ -55,6 +52,13 @@ login: `localhost:3000`
 - GitHub: [@githubhandle](https://github.com/Ogaga01)
 - Twitter: [@twitterhandle](https://twitter.com/i_ogaga_n)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ogaga-iyara-0339b0105/)
+
+## Future Features
+
+> Create User
+> Create Posts
+> Create Comments
+> Update fields
 
 ## 🤝 Contributing
 
