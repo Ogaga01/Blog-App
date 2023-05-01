@@ -1,9 +1,11 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Blog App
 
 > Description the project.
 > The Blog app is a classic example of a blog website that shows the list of posts and empower readers to interact with them by adding comments and liking posts.
+> Create User
+> Create Posts
+> Create Comments
+> Update fields
 
 ## Built With
 
@@ -13,7 +15,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](Coming Soon)
 
 ## Getting Started
 
