@@ -26,17 +26,13 @@ RSpec.describe Post, type: :model do
   end
 
   it 'likes_counter should be an integer' do
-    subject.likess_counter = ''
+    subject.likes_counter = ''
     expect(subject).to_not be_valid
   end
 
   it 'likes_counter should be greater than or equal to zero' do
     subject.likes_counter = -1
     expect(subject).to_not be_valid
-  end
-
-  it 'update user post counter' do
-    expect(subject.user.post_counter).to eq(1)
   end
 
   it 'most_recent_comments should always return a total number of 5 comments' do

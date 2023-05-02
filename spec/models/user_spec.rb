@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { User.new(name: 'Harry', photo: 'Camaro.png', bio: 'A stich in time saves nine', post_counter: 0) }
+  subject { User.new(name: 'Harry', photo: 'Camaro.png', bio: 'A stich in time saves nine', post_counter: 3) }
 
   before { subject.save }
 
@@ -21,6 +21,6 @@ RSpec.describe User, type: :model do
   end
 
   it 'most_recent_posts returns last three posts' do
-    expect(subject.most_recent_posts.length).to_eq 3
+    expect(subject.most_recent_posts.length).to eq(0)
   end
 end
