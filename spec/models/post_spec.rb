@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-Rspec.describe Post, type: :model do
+RSpec.describe Post, type: :model do
   subject { Post.new(title: 'My recent post', text: 'This is my recent post', comments_counter: 0, likes_counter: 0) }
 
   before { subject.save }
