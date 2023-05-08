@@ -1,3 +1,37 @@
-<p style="color: green"><%= notice %></p>
+<section class="user">
+  <div class="user__div">
+    <div class="user__div--image">
+      <img class="user__div--img" src="<%= @user.photo %>" alt="User Avatar">
+    </div>
 
-<h1>Here the details of a user: Name, Photo, Bio, and Posts</h1>
+    <div class="user__div--body">
+      <div class="user__div--flex">
+        <h2 class="user__div--heading"><%= @user.name %></h2>
+        <p class="user__div--para">Number of posts: <%= @user.post_counter || 0 %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="user__bio">
+    <h3>Bio</h3>
+    <p><%= @user.bio%></p>
+  </div>
+
+  <div class="user__posts">
+    <ul class="user__posts--list">
+      <% @user.most_recent_posts.each_with_index do |post, index| %>
+        <li class="user__posts--item">
+          <h3>Post #<%= index + 1 %> </h3>
+          <p><%= post.text %></p>
+          <div class="user__posts--comment">
+          <span class="user__posts--com">Comments: <%= post.comments_counter || 0 %>, </span>
+          <span class="user__posts--likes">Likes:<%= post.likes_counter || 0 %></span>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <a class="user__link" href="<%= @user.id %>/posts">See all posts</a>
+
+</section>

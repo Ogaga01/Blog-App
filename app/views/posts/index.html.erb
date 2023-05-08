@@ -1,3 +1,39 @@
-<p style="color: green"><%= notice %></p>
+<section class="posts">
+  <div class="posts__div">
+    <div class="posts__div--image">
+      <img class="posts__div--img" src="<%= @user.photo %>" alt="User Avatar"/>
+    </div>
 
-<h1>Here is a list of posts for a given user</h1>
+    <div class="posts__body">
+      <a class="posts__body--link" href="/users/<%= @user.id %>/posts">
+        <h2 class="posts__body--heading"><%= @user.name%></h2>
+        <p class="post-count">Number of posts: <%= @user.post_counter || 0 %></p>
+      </a>
+    </div>
+  </div>
+
+  <div class="posts__post">
+    <% @posts.each_with_index do |post, index| %>
+      <a href="posts/<%= post.id %>">
+        <div class="posts__post--li">
+          <h3>Post #<%= index + 1 %></h3>
+          <p><%= post.text%></p>
+          <div class="posts__post--comment">
+            <span class="posts__post--com">Comments: <%= post.comments_counter || 0 %>, </span>
+            <span class="posts__post--likes">Likes: <%= post.likes_counter || 0 %></span>
+          </div>
+        </div>
+      </a>
+
+      <ul class="posts__comment">
+        Comments:
+        <div class="posts__comment--list">
+          <% post.most_recent_comments.each do |comment| %>
+            <li class="posts__comment--li"><%= comment.user.name %>: <%= comment.text %> </li>
+          <% end %>
+        </div>
+      </ul>
+    <% end %>
+  </div>
+
+</section>
