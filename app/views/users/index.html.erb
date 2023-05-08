@@ -1,3 +1,18 @@
-<p style="color: green"><%= notice %></p>
+<section class="users">
+  <ul class="users__list">
+    <% @users.each do |user| %>
+      <li class="users__list--item">
+        <div class="img-con">
+          <img class="users__list--img" src="<%= user.photo %>" alt="User Avatar" />
+        </div>
 
-<h1>Here is a list of users</h1>
+        <div class="users__list--body">
+          <a class="users__list--link" title="view user details" href="/users/<%= user.id %>">
+            <h2 class="users__list--heading"><%= user.name%></h2>
+            <p class="users__list--para">Number of posts: <%= user.post_counter || 0 %> </p>
+          </a>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</section>
