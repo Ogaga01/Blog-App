@@ -31,6 +31,11 @@
 - Ruby on Rails
 - VScode
 
+## Key features
+
+> Create User
+> Create Posts
+
 ## Live Demo (if available)
 
 [Live Demo Link](Coming Soon)
