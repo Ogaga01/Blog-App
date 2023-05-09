@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
   def create
     @user = current_user
     @post = Post.find_by(id: params[:post_id])
-    @comment = Comment.new(post_id: params[:post_id], user_id: current_user.id, text: comment_params[:text])
+    @comment = Comment.new(post_id: params[:post_id], author_id: current_user.id, text: comment_params[:text])
 
     if @comment.save
       @comment.update_posts_comments_counter
