@@ -20,6 +20,7 @@
   <div class="user__posts">
     <ul class="user__posts--list">
       <% @user.most_recent_posts.each_with_index do |post, index| %>
+        <%= link_to user_post_path(@user, post.id) do %>
         <li class="user__posts--item">
           <h3>Post #<%= index + 1 %> </h3>
           <p><%= post.text %></p>
@@ -28,6 +29,7 @@
           <span class="user__posts--likes">Likes:<%= post.likes_counter || 0 %></span>
           </div>
         </li>
+        <% end %>
       <% end %>
     </ul>
   </div>

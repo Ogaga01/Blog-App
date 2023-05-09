@@ -24,7 +24,6 @@ class PostsController < ApplicationController
     @post.comments_counter = 0
 
     if @post.save
-      @post.update_users_posts_counter
       flash[:notice] = 'Your post was created successfully'
       redirect_to user_path(@user), notice: 'Your post was created successfully!'
     else

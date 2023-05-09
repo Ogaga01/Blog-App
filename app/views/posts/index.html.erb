@@ -29,7 +29,7 @@
         Comments:
         <div class="posts__comment--list">
           <% post.most_recent_comments.each do |comment| %>
-            <li class="posts__comment--li"><%= comment.user.name %>: <%= comment.text %> </li>
+            <li class="posts__comment--li"><%= comment.author.name %>: <%= comment.text %> </li>
           <% end %>
         </div>
       </ul>
