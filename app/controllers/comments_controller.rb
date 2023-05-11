@@ -11,7 +11,6 @@ class CommentsController < ApplicationController
     @comment = Comment.new(post_id: params[:post_id], author_id: current_user.id, text: comment_params[:text])
 
     if @comment.save
-      @comment.update_posts_comments_counter
       redirect_to user_post_path(@user.id, @post.id), notice: 'Comment created successfully!'
     else
       redirect_to user_post_path(@user.id, @post.id), notice: 'Sorry! something went wrong!'
