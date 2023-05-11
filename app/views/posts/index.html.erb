@@ -14,22 +14,22 @@
 
   <div class="posts__post">
     <% @posts.each_with_index do |post, index| %>
-      <a href="posts/<%= post.id %>">
+      <%= link_to user_post_path(@user, post.id) do %>
         <div class="posts__post--li">
-          <h3>Post #<%= index + 1 %></h3>
+          <h3>Post <%= index + 1 %></h3>
           <p><%= post.text%></p>
           <div class="posts__post--comment">
             <span class="posts__post--com">Comments: <%= post.comments_counter || 0 %>, </span>
             <span class="posts__post--likes">Likes: <%= post.likes_counter || 0 %></span>
           </div>
         </div>
-      </a>
+      <% end %>
 
       <ul class="posts__comment">
         Comments:
         <div class="posts__comment--list">
           <% post.most_recent_comments.each do |comment| %>
-            <li class="posts__comment--li"><%= comment.user.name %>: <%= comment.text %> </li>
+            <li class="posts__comment--li"><%= comment.author.name %>: <%= comment.text %> </li>
           <% end %>
         </div>
       </ul>

@@ -1,18 +1,29 @@
 <section class="post">
   <div class="post__detail">
     <div class="post__detail--body">
-      <h3>Post #<%= @post.id%> by <%= @post.user.name %></h3>
+      <h3>Post <%= @post.id %> by <%= @user.name %></h3>
       <div class="post__detail--comment">
-        <span class="post__detail--com">Comments: <%= @post.comments_counter || 0%>, </span>
+        <span class="post__detail--com">Comments: <%= @post.comments_counter || 0 %>, </span>
         <span class="post__detail--likes">Likes: <%= @post.likes_counter || 0 %> </span>
       </div>
     </div>
     <p class="post__detail--text"> <%= @post.text %> </p>
+
+    <div>
+      <%= form_with model: @like, url:  user_post_likes_path(@user, @post) do |form|%>
+          <%= form.submit 'Like post', class: 'submit' %>
+        <%end%>
+    </div>
   </div>
+
   <ul class="post__detail--list">
     Comments:
     <% @comments.each do |comment| %>
-      <li class="post__detail--li"><%= comment.user.name%>: <%= comment.text %></li>
+      <li class="post__detail--li"><%= comment.author&.name %>: <%= comment.text %></li>
     <% end %>
   </ul>
 </section>
+
+<button class="see-all-post d-flex border">
+    <%= link_to "Create new comment", new_user_post_comment_path(@user, @post) %>
+</button>
