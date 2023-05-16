@@ -49,30 +49,30 @@ RSpec.describe 'Post pages test', type: :feature do
     end
 
     it 'I can see the first comments on a post' do
-        visit user_posts_path(@user_first.id)
-        expect(@comment.text).to have_content('My first comment')
-      end
-  
-      it 'I can see how many comments a post has' do
-          visit user_posts_path(@user_first.id)
-          expect(@post_first.comments_counter).to eq 1
-      end
-  
-      it 'I can see how many likes a post has' do
-          visit user_posts_path(@user_first.id)
-          expect(@post_first.likes_counter).to eq 3
-      end
-  
-      it 'I can see a section for pagination if there are more posts than fit on the view' do
-          visit user_posts_path(@user_first.id)
-          expect(page).to have_content('Tom')
-      end
-  
-      it "Should redirect me to that post's show page" do
-          visit user_path(@user_first.id)
-          click_on "Posts"
-          expect(page).to have_current_path(user_post_path(@user_first.id))
-      end
+      visit user_posts_path(@user_first.id)
+      expect(@comment.text).to have_content('My first comment')
+    end
+
+    it 'I can see how many comments a post has' do
+      visit user_posts_path(@user_first.id)
+      expect(@post_first.comments_counter).to eq 1
+    end
+
+    it 'I can see how many likes a post has' do
+      visit user_posts_path(@user_first.id)
+      expect(@post_first.likes_counter).to eq 3
+    end
+
+    it 'I can see a section for pagination if there are more posts than fit on the view' do
+      visit user_posts_path(@user_first.id)
+      expect(page).to have_content('Tom')
+    end
+
+    it "Should redirect me to that post's show page" do
+      visit user_path(@user_first.id)
+      click_on 'Posts'
+      expect(page).to have_current_path(user_post_path(@user_first.id))
+    end
   end
 
   describe 'show page' do
