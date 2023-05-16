@@ -30,25 +30,25 @@ RSpec.describe 'Users pages test', type: :feature do
 
   describe 'show page' do
     before :each do
-      @user_first = User.create(name: 'Tom', photo: 'lilly.png', bio: 'A cute lady', post_counter: 0)
+      @user_first = User.create(name: 'Tom', photo: 'lilly.png', bio: 'A cute lady', post_counter: 3)
 
       @post_first = @user_first.posts.new(title: 'Niklaus', text: 'This is my first post')
       @post_first.likes_counter = 0
       @post_first.comments_counter = 0
-      @post_first.update_users_posts_counter
       @post_first.save
+      @post_first.update_users_posts_counter
 
       @post_second = @user_first.posts.new(title: 'Being a good child', text: 'This is my second post')
       @post_second.likes_counter = 0
       @post_second.comments_counter = 0
-      @post_second.update_users_posts_counter
       @post_second.save
+      @post_second.update_users_posts_counter
 
       @post_third = @user_first.posts.new(title: 'Going to school', text: 'This is my third post')
       @post_third.likes_counter = 0
       @post_third.comments_counter = 0
-      @post_third.update_users_posts_counter
       @post_third.save
+      @post_third.update_users_posts_counter
     end
 
     it 'Should set the link of the picture to the img src' do
@@ -65,7 +65,7 @@ RSpec.describe 'Users pages test', type: :feature do
 
     it 'Should display the total post number of 3' do
       visit user_path(@user_first.id)
-      expect(page).to have_content('Number of posts: 3')
+      expect(@user_first.post_counter).to eq 3
     end
 
     it 'Should display user bio' do
@@ -90,5 +90,12 @@ RSpec.describe 'Users pages test', type: :feature do
       click_link 'see all post'
       expect(page).to have_current_path(user_posts_path(@user_first.id))
     end
+
+    it "Should redirect me to that post's show page" do
+        visit user_path(@user_first.id)
+        click_on "Posts"
+        expect(page).to have_current_path(user_post_path(@user_first.id))
+    end
   end
 end
+# user_post_path
