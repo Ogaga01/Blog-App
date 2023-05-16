@@ -92,9 +92,9 @@ RSpec.describe 'Users pages test', type: :feature do
     end
 
     it "Should redirect me to that post's show page" do
-      visit user_path(@user_first.id)
-      click_on 'Posts'
-      expect(page).to have_current_path(user_post_path(@user_first.id))
+        visit user_path(@user_first.id)
+        click_on('Post 3')
+        expect(page).to have_current_path(user_post_path(@user_first.id, @post_first.id))
     end
   end
 end

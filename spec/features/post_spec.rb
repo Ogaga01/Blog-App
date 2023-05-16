@@ -65,13 +65,13 @@ RSpec.describe 'Post pages test', type: :feature do
 
     it 'I can see a section for pagination if there are more posts than fit on the view' do
       visit user_posts_path(@user_first.id)
-      expect(page).to have_content('Tom')
+      expect(@user_first.post_counter).to eq 1
     end
 
     it "Should redirect me to that post's show page" do
       visit user_path(@user_first.id)
-      click_on 'Posts'
-      expect(page).to have_current_path(user_post_path(@user_first.id))
+      click_on('Post')
+      expect(page).to have_current_path(user_post_path(@user_first.id, @post_first.id))
     end
   end
 
