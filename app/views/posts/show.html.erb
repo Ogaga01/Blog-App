@@ -18,7 +18,7 @@
 
   <ul class="post__detail--list">
     Comments:
-    <% @comments.each do |comment| %>
+    <% @comments.includes(:author).each do |comment| %>
       <li class="post__detail--li"><%= comment.author&.name %>: <%= comment.text %></li>
     <% end %>
   </ul>
