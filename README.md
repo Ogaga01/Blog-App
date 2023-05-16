@@ -73,11 +73,22 @@ login: `localhost:3000`
 
 ## Authors
 
-👤 **Author1**
+👤 **Ogaga Iyara**
 
 - GitHub: [@githubhandle](https://github.com/Ogaga01)
+
 - Twitter: [@twitterhandle](https://twitter.com/i_ogaga_n)
+
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ogaga-iyara-0339b0105/)
+
+👤 **Joseph David**
+
+- GitHub: [@jodavid444](https://github.com/jodavid444)
+
+- Twitter: [@jodavid444dave](https://twitter.com/jodavid444dave)
+
+- LinkedIn: [@joseph-david](https://www.linkedin.com/in/joseph-david-/)
+
 
 ## Future Features
 
