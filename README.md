@@ -22,8 +22,7 @@
 
 # Blog App
 
-> Description the project.
-> The Blog app is a classic example of a blog website that shows the list of posts and empower readers to interact with them by adding comments and liking posts.
+> The Blog app is a classic example of a blog website. It's a functional website that shows the list of posts and empower readers to interact with them by adding comments and liking post. In this project, we added devise.
 
 ## Built With
 
